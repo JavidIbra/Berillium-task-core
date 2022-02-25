@@ -1,0 +1,30 @@
+﻿@model List<Project>
+
+<div class="gtco-section">
+    <div class="gtco-container">
+        <div class="row gtco-heading">
+            <div class="col-md-7 text-left">
+                <h2>Works</h2>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="search">
+        </div>
+        <div class="row" id="container">
+
+
+            @foreach (var item in Model)
+            {
+
+               <div class="item col-md-4">
+                <div class="gtco-item">
+                    <a href="#"><img src="~/images/@item.img" alt="" class="img-responsive"></a>
+                    <h2><a href="#">@item.Header</a></h2>
+                    <p class="role">@item.Text</p>
+                </div>
+               </div>
+
+            }
+        </div>
+    </div>
+</div>

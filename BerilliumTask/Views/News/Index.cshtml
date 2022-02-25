@@ -1,0 +1,40 @@
+﻿@model List<News>
+
+<div class="gtco-section">
+    <div class="gtco-container">
+        <div class="row gtco-heading">
+            <div class="col-md-7 text-left">
+                <h2>News</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 gtco-news">
+                <ul id="portfolio-container">
+
+                    <partial name="_NewsPartial">
+                    
+                    @*@foreach (var item in Model)
+                    {
+                        <li>
+                            <a href="#">
+                                <span class="post-date">@item.Time</span>
+                                <h3>@item.Title</h3>
+                                <p>@item.Text</p>
+                            </a>
+                        </li>
+                    }*@
+
+                </ul>
+
+                <div class="text-center">
+                    
+                    <a href="" id="load-more" class="btn btn-primary">view more</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="count" value="@ViewBag.Count"/>
